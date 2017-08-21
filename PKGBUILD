@@ -2,7 +2,7 @@
 
 pkgname=udisks-s6serv
 pkgver=0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="udisks service for s6"
 arch=(x86_64)
 license=('beerware')
@@ -24,7 +24,7 @@ package() {
 	
 	# log
 	install -Dm 0755 "$srcdir/udisks.log.run.s6" "$pkgdir/etc/s6-serv/available/classic/udisks/log/run"
-	install -Dm 0644 "$srcdir/udisks.logd" "$pkgdir/etc/s6-serv/log.d/serv/udisks"
+	install -Dm 0644 "$srcdir/udisks.logd" "$pkgdir/etc/s6-serv/log.d/udisks"
 	
 	install -Dm 0755 "$srcdir/LICENSE" "$pkgdir/usr/share/licenses/udisks-s6serv/LICENSE"
 }
